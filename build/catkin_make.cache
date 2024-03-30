@@ -1,0 +1,2 @@
+scorpio_zadanie_rekrutacyjne_software
+-DCATKIN_DEVEL_PREFIX=/home/magda/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/magda/catkin_ws/install -G Unix Makefiles
