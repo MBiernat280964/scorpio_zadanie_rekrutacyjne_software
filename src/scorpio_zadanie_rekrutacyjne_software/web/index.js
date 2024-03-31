@@ -80,9 +80,9 @@ const motor_2= {
 };
 
 //html
-const mAngle_0 = document.getElementById("motorAngle_0");
-const mAngle_1 = document.getElementById("motorAngle_1");
-const mAngle_2 = document.getElementById("motorAngle_2");
+const arm_0 = document.getElementById("arm_0");
+const arm_1 = document.getElementById("arm_1");
+const arm_2 = document.getElementById("arm_2");
 const disMot = document.getElementById("disableMotor");
 const slider_0 = document.getElementById("myRange_0");
 const slider_1 = document.getElementById("myRange_1");
@@ -90,16 +90,16 @@ const slider_2 = document.getElementById("myRange_2");
 
 // update current slider value
 slider_0.oninput = function() {
-  console.log(this.value);
-  //move_motor(motor_0,this.value);
+  console.log('oninput slider  '+this.value);
+  motor_0.power = this.value;
 }
 slider_1.oninput = function() {
     console.log(this.value+' motor 1');
-    //move_motor(motor_1,this.value);
+    motor_1.power = this.value;
 }
 slider_2.oninput = function() {
     console.log(this.value+' motor 2');
-    //move_motor(motor_2,this.value);
+    motor_2.power = this.value;
 }
 
 //motor disable button functionality
@@ -122,7 +122,7 @@ function move_motor(motor, dir){
     motor.pub.publish(new ROSLIB.Message({
         data : x
     }))
-    console.log('speed: '+x);
+    console.log('speed move_motor: '+x+'  angle :'+motor.angle);
 };
 
 function update_pos(){
@@ -130,6 +130,9 @@ function update_pos(){
     motor_0.lis.subscribe(function(message) {
     motor_0.angle = Math.ceil((message.data * 360) / 4095);
     motor_0.lis.unsubscribe();
+    arm_0.style.transform = "rotate("+motor_0.angle+"deg)";
+    arm_1.style.transform = "rotate("+motor_1.angle+"deg)";
+    arm_2.style.transform = "rotate("+motor_2.angle+"deg)";
 });
 motor_1.lis.removeAllListeners();
 motor_1.lis.subscribe(function(message) {
@@ -141,9 +144,6 @@ motor_2.lis.subscribe(function(message) {
 motor_2.angle = Math.ceil((message.data * 360) / 4095);
 motor_2.lis.unsubscribe();
 });
-mAngle_0.textContent = motor_0.angle +'  stopni';
-mAngle_1.textContent = motor_1.angle +'  stopni';
-mAngle_2.textContent = motor_2.angle +'  stopni';
 };
 
 const timer = setInterval(update_pos, 500);
@@ -152,6 +152,7 @@ const timer = setInterval(update_pos, 500);
 
 document.addEventListener("keydown", event => {
     console.log(event);
+    console.log(motor_0.angle);
     if(disMot.textContent=="Disable motor control"){
         switch(event.key){
             case "q":

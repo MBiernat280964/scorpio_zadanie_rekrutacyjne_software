@@ -9,22 +9,34 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <div class="split right">
-    <p style="font-size:1.5em;text-align: right;padding-right: 5%;">M. Biernat 2024</p>
-    <h1>Scorpio</h1>
-    <h2>Zadanie Rekrutacyjne Software</h2>
-    <br><br><br>
-    <a href ="https://github.com/MBiernat280964/scorpio_zadanie_rekrutacyjne_software">
-      github repo
-    </a>
+    <div class="right_inside">
+      <br>
+      <p class="small_text black">M. Biernat 2024</p>
+      <img src="logo-offroad-czarne.png" style="width:95%;">
+      <p class="small_text" style="text-indent: 10%;">This web app demonstrates a simulation of three motors which are capable of rotating 360 degrees with various speeds. Respective motors' parameters are manipulated through specific keyboard keys (rotation direction) as well as the sliders on the side (speed).</p>
+      <div style="padding-top:30%;padding-left:5%;">
+        <a href ="https://github.com/MBiernat280964/scorpio_zadanie_rekrutacyjne_software">
+          github repository
+        </a>
+      </div>
+    </div>
   </div>
+
+
   <div class="split left">
     <div style="padding-left: 15%;">
       <button type="button" id="disableMotor">Disable motor control</button>
     </div>
+
     <div class="container">
-      <p class="motor_text"> MOTOR 1</p>
-      <label class="small_text" id="motorAngle_0"></label>
+      <p ><span style="background-color: rgb(41, 35, 31); border-radius: 100%;">Q/E</span><span class="motor_text">MOTOR 1</span></p>
+      <div class="window">
+        <div style="margin-left: 20%;margin-top:35%;">
+          <div class="robot_arm" id="arm_0"></div>
+        </div>
+      </div>
       <div class="slidecontainer" >
         <input type="range" min="0" max="100" value="0" class="slider" id="myRange_0">
       </div>
@@ -32,8 +44,12 @@
 
     
     <div class="container">
-      <p class="motor_text"> MOTOR 2</p>
-      <label class="small_text" id="motorAngle_1">trol</label>
+      <p ><span style="background-color: rgb(41, 35, 31); border-radius: 100%;">A/D</span><span class="motor_text">MOTOR 2</span></p>
+      <div class="window">
+        <div style="margin-left: 20%;margin-top:35%;">
+          <div class="robot_arm" id="arm_1"></div>
+        </div>
+      </div>
       <div class="slidecontainer" >
         <input type="range" min="0" max="100" value="0" class="slider" id="myRange_1">
       </div>
@@ -41,8 +57,12 @@
     
     
     <div class="container">
-      <p class="motor_text"> MOTOR 3</p>
-      <label class="small_text" id="motorAngle_2"></label>
+      <p ><span style="background-color: rgb(41, 35, 31); border-radius: 100%;">Z/C</span><span class="motor_text">MOTOR 3</span></p>
+      <div class="window">
+        <div style="margin-left: 20%;margin-top:35%;">
+          <div class="robot_arm" id="arm_2"></div>
+        </div>
+      </div>
       <div class="slidecontainer" >
         <input type="range" min="0" max="100" value="0" class="slider" id="myRange_2">
       </div>
