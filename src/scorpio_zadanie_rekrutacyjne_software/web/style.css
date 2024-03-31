@@ -1,0 +1,83 @@
+body{
+    background-color:rgb(65, 57, 51);
+}
+h1{
+    margin: 0%;
+    color:chocolate;
+    font-weight: bolder;
+    font-size:3em;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h2{
+    color:chocolate;
+    font-weight: bold;
+    font-size:1.5em;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+a{
+    color:white;
+    font-size:1.5em;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+a:hover{
+    background-color: blueviolet;
+}
+#disableMotor{
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: white;
+    background-color: chocolate;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+#disableMotor:hover{
+    background-color: brown;
+}
+p{
+    color:chocolate;
+}
+.split{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 2%;
+}
+.left{
+    left: 0;
+    width: 60%;
+    padding-left: 5%;
+    height: 100%;
+}
+.right{
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: rgb(17, 15, 15);
+    padding-left: 5%;
+}
+.slider{
+    width: 50%;
+}
+
+.container{
+    display:grid;
+    align-items:center;
+    grid-template-columns: 0.25fr 0.5fr 1.25fr;
+    column-gap: 5px;
+    min-height:30%;
+}
+.motor_text{
+    max-width:30px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-weight: bolder;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.small_text{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
