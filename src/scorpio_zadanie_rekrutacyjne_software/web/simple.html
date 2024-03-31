@@ -26,46 +26,38 @@
 
 
   <div class="split left">
+    <h1 style="font-family: Arial, Helvetica, sans-serif;text-align:center; color:chocolate;">Motor simulator</h1>
+
+    <div class="container">
+
+      <div class="window">
+        <div style="padding:30%;margin-top:15%;">
+          <div class="robot_arm" style="background: rgb(131, 23, 23);" id="arm_0">
+            <div class="robot_arm" style="transform-origin:0px 3px;background:rgb(177, 76, 29);" id="arm_1">
+              <div class="robot_arm" style="transform-origin:40px 3px;background:rgb(189, 164, 84);" id="arm_2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center;width:100%;">
+        <h2 style="color:rgb(131, 23, 23);font-family:Arial, Helvetica, sans-serif;">motor 1</h2>
+        <div class="slidecontainer" >
+          <input type="range" min="0" max="100" value="0" class="slider" id="myRange_0">
+        </div>
+        <h2 style="color:rgb(177, 76, 29);font-family:Arial, Helvetica, sans-serif;">motor 2</h2>
+        <div class="slidecontainer" >
+          <input type="range" min="0" max="100" value="0" class="slider" id="myRange_1">
+        </div>
+        <h2 style="color:rgb(189, 164, 84);font-family:Arial, Helvetica, sans-serif;">motor 3</h2>
+        <div class="slidecontainer" >
+          <input type="range" min="0" max="100" value="0" class="slider" id="myRange_2">
+        </div>
+      </div>
+    </div>
+    
     <div style="padding-left: 15%;">
       <button type="button" id="disableMotor">Disable motor control</button>
-    </div>
-
-    <div class="container">
-      <p ><span style="background-color: rgb(41, 35, 31); border-radius: 100%;">Q/E</span><span class="motor_text">MOTOR 1</span></p>
-      <div class="window">
-        <div style="margin-left: 20%;margin-top:35%;">
-          <div class="robot_arm" id="arm_0"></div>
-        </div>
-      </div>
-      <div class="slidecontainer" >
-        <input type="range" min="0" max="100" value="0" class="slider" id="myRange_0">
-      </div>
-    </div>
-
-    
-    <div class="container">
-      <p ><span style="background-color: rgb(41, 35, 31); border-radius: 100%;">A/D</span><span class="motor_text">MOTOR 2</span></p>
-      <div class="window">
-        <div style="margin-left: 20%;margin-top:35%;">
-          <div class="robot_arm" id="arm_1"></div>
-        </div>
-      </div>
-      <div class="slidecontainer" >
-        <input type="range" min="0" max="100" value="0" class="slider" id="myRange_1">
-      </div>
-    </div>
-    
-    
-    <div class="container">
-      <p ><span style="background-color: rgb(41, 35, 31); border-radius: 100%;">Z/C</span><span class="motor_text">MOTOR 3</span></p>
-      <div class="window">
-        <div style="margin-left: 20%;margin-top:35%;">
-          <div class="robot_arm" id="arm_2"></div>
-        </div>
-      </div>
-      <div class="slidecontainer" >
-        <input type="range" min="0" max="100" value="0" class="slider" id="myRange_2">
-      </div>
     </div>
   </div>
 

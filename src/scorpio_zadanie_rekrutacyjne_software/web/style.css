@@ -49,19 +49,20 @@ p{
     background-color: rgb(65, 57, 51);
     margin-right:10%;
     min-height:92%;
-    padding-left: 4%;
+    padding: 4%;
     border-radius: 25px;
 }
 .slider{
-    width: 50%;
+    width: 100%;
 }
 
 .container{
     display:grid;
+    margin-right:10%;
     align-items:center;
-    grid-template-columns: 0.25fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     column-gap: 5px;
-    min-height:30%;
+    min-height:70%;
 }
 .motor_text{
     max-width:30px;
@@ -82,21 +83,17 @@ p{
     padding-bottom:5%;
 }
 .window{
-    margin-left:20%;
+    margin-left:0%;
     background-color: rgb(41, 35, 31);
-    height:75%;
-    min-height:135px;
     width:70%;
+    height:90%;
     border-radius: 25px;
 }
 .robot_arm{
-    width:40%;
-    height:3px;
-    background: aliceblue;
-    position:static;
+    width: 40px;
+    height:8px;
     transform-origin: 100%;
     transform:rotate(0deg);
-    
 }
 
 

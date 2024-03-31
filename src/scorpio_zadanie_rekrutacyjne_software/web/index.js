@@ -79,6 +79,19 @@ const motor_2= {
     angle :0
 };
 
+//service
+var getJointsLength = new ROSLIB.Service({
+    ros: ros,
+    name : '/get_joints_length',
+    serviceType : 'virtual_dc_motor/getMotorJointLengths'
+});
+
+var req = new ROSLIB.ServiceRequest();
+
+getJointsLength.callService(req, function(result){
+    console.log(result);
+});
+
 //html
 const arm_0 = document.getElementById("arm_0");
 const arm_1 = document.getElementById("arm_1");
